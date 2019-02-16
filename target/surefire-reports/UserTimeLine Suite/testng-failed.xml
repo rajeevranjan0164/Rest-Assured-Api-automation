@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [UserTimeLine Suite]">
+  <test thread-count="5" verbose="0" name="RestAssured Test(failed)">
+    <classes>
+      <class name="com.tweeter.statuses.UserTimeLineTest">
+        <methods>
+          <include name="readTweetsOne"/>
+          <include name="setUp"/>
+          <include name="readTweetsTwo"/>
+        </methods>
+      </class> <!-- com.tweeter.statuses.UserTimeLineTest -->
+    </classes>
+  </test> <!-- RestAssured Test(failed) -->
+</suite> <!-- Failed suite [UserTimeLine Suite] -->
