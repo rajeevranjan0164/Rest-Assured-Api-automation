@@ -32,7 +32,6 @@ public class RestUtility {
     }
 
     public static RequestSpecification getRequestSpecification() {
-
         AuthenticationScheme authScheme =
                 RestAssured.oauth(Auth.CONSUMER_KEY, Auth.CONSUMER_SECRET, Auth.ACCESS_TOKEN, Auth.ACCESS_SECRET);
         REQUEST_BUILDER = new RequestSpecBuilder();
@@ -43,8 +42,7 @@ public class RestUtility {
     }
 
     public static ResponseSpecification getResponseSpecification() {
-
-        RESPONSE_BIILDER = new  ResponseSpecBuilder();
+        RESPONSE_BIILDER = new ResponseSpecBuilder();
         RESPONSE_BIILDER.expectStatusCode(200);
         RESPONSE_BIILDER.expectResponseTime(lessThan(3L), TimeUnit.MINUTES);
         RESPONSE_SPECIFICATION = RESPONSE_BIILDER.build();
@@ -96,12 +94,12 @@ public class RestUtility {
 
     public static JsonPath getJsonPath(Response response) {
         String path = response.asString();
-        return  new JsonPath(path);
+        return new JsonPath(path);
     }
 
     public static XmlPath getXmlPath(Response response) {
         String path = response.asString();
-        return  new XmlPath(path);
+        return new XmlPath(path);
     }
 
     public static void resetBasePath() {

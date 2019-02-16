@@ -25,7 +25,6 @@ public class UserTimeLineTest {
         requestSpecification = RestUtility.getRequestSpecification();
         requestSpecification.queryParam("user_id", "Rajeev Ranjan");
         requestSpecification.basePath(Path.STATUSES);
-
         responseSpec = RestUtility.getResponseSpecification();
     }
 
